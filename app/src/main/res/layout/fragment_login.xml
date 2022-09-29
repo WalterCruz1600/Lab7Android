@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_Login_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laboratorio 7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editText_Login_Correoe"
+            android:layout_marginBottom="20dp"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/button_Login_ToHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_Login_ToNewAccount"
+            android:backgroundTint="@color/orange"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <Button
+            android:id="@+id/button_Login_ToNewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Nuevo usuario? ¡Crea tu cuenta aquí!"
+            app:layout_constraintBottom_toTopOf="@id/button_Login_ToHome"
+            app:layout_constraintStart_toStartOf="@id/editText_Login_Correoe"
+            app:layout_constraintTop_toBottomOf="@+id/editText_Login_Correoe"
+            android:textColor="@color/celestePalido"
+            android:backgroundTint="@color/transparente"
+            android:textSize="10sp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editText_Login_Correoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa tu correo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
